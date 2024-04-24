@@ -1,0 +1,437 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: white;
+}
+.loading{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+}
+.loading span{
+    color: #aeff00;
+}
+
+.pointer{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1).4s;
+    height: 1vw;
+    width: 1vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    z-index: 9999;
+}
+::selection{
+    background-color: #aeff00;
+    color: #000000;
+}
+.btn{
+    padding: 1.5vw 2.2vw;
+    border-radius: 3vw;
+    background-color: #aeff00;
+    border: 0px solid transparent;
+    font-weight: 600;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+.nav{
+    color: white;
+    padding: 2vw 3vw;
+    height: fit-content;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.navright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1vw;
+}
+.ni{
+    padding: .6vw 1.5vw;
+    border-radius: 5vw;
+    border: 1px solid rgba(255, 255, 255, 0.096);
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+}
+.ni{
+    color: rgba(255, 255, 255, 0.904);
+    text-decoration: none;
+    transition: all ease-in-out .3s;
+}
+.ni:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #aeff00;
+    bottom: -100%;
+    left: 0;
+    border-radius: 50%;
+    transition: all ease-in-out .3s;
+    z-index: -1;
+}
+.ni:hover:after{
+    bottom: 0%;
+    border-radius: 0%;
+    color: black;
+}
+.ni:hover{
+    color: black;
+}
+
+.nii{
+    border: 1px solid #aeff00;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    padding: 1.5vw 2.2vw;
+    border-radius: 3vw;
+    background-color: #aeff00;
+    font-weight: 600;
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    transition: all ease-in-out .3s;
+}
+
+.nii:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #000;
+    bottom: -100%;
+    left: 0;
+    border-radius: 50%;
+    transition: all ease-in-out .3s;
+    z-index: -1;
+}
+.nii:hover:after{
+    bottom: 0%;
+    border-radius: 0%;
+    color: rgb(255, 255, 255);
+}
+.nii:hover{
+    color: #aeff00;
+}
+.logo{
+    font-size: 2vw;
+    font-weight: 800;
+}
+.logo img{
+    width: 60%;
+}
+.hero{
+    padding: 2vw 3vw;
+    height: fit-content;
+    width: 100%;
+    font-size: 5vw;
+    line-height: 118%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.heroleft{
+    width: 50%;
+}
+.heroright{
+    margin-top: 6vw;
+    width: 50%;
+    font-size: 1.4vw;
+    line-height: normal;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 1vw;
+    flex-direction: column;
+}
+.arrow1{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    font-size: 2vw;
+    width: 20%;
+    padding: 1vw;
+    padding-left: 3vw;
+    border-radius: 3vw;
+    background-color: #aeff00;
+    transition: all ease-in-out .3s;
+}
+.arrow1 svg{
+    height: 4vw;
+    width: 8vw;
+}
+.arrow1:hover{
+    width: 30%;
+}
+.arrow2{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    font-size: 2vw;
+    width: 10%;
+    padding: 1vw;
+    padding-left: 3vw;
+    border-radius: 3vw;
+    background-color: #aeff00;
+    transition: all ease-in-out .3s;
+}
+.arrow2 svg{
+    height: 4vw;
+    width: 8vw;
+}
+.arrow2:hover{
+    width: 20%;
+}
+
+.video{
+    min-height: 100vh;
+    width: 100%;
+    padding: 2vw 3vw;
+    overflow: hidden;
+}
+.video video{
+    width: 100%;
+    border-radius: 2vw;
+}
+.page1{
+    padding: 2vw 3vw;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+}
+.page1top{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    font-size: 4vw;
+    font-weight: 700;
+}
+.page1top span{
+    color: #aeff00;
+}
+.page1bottom{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-direction: column;
+}
+.card{
+    padding: 2vw 0vw;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-top: .2vw solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+#card3{
+    border-bottom: .2vw solid rgba(255, 255, 255, 0.5);
+}
+.cardleft{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 8vw;
+}
+.cc{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.cc span{
+    color: white;
+    font-size: 3vw;
+    font-weight: 600;
+    line-height: 110%;
+    /* width: fit-content; */
+    /* background-color: red; */
+}
+.cc div{
+    width: 50%;
+}
+.cc:nth-child(3){
+    /* background-color: red; */
+    height: 100%;
+    width: 30%;
+}
+.cc:nth-child(3) p{
+    /* background-color: red; */
+    height: 100%;
+    font-size: 1.2vw;
+}
+.card svg{
+    color: white;
+    height: 3.5vw;
+    /* width: 10px; */
+}
+.ccc1{
+    display: none;
+}
+.ccc2{
+    display: none;
+}
+.ccc3{
+    display: none;
+}
+.page2{
+    padding: 2vw 3vw;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 3vw;
+}
+.cardright1 svg{
+    rotate: -45deg;
+}
+.cardright2 svg{
+    rotate: -45deg;
+}
+.cardright3 svg{
+    rotate: -45deg;
+}
+.page2top{
+    font-size: 2vw;
+}
+.page2top span{
+    color: #aeff00;
+}
+.page2bottom{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3vw;
+}
+.project{
+    height: fit-content;
+    width: 30%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 2vw;
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; */
+    overflow: hidden;
+    gap: 1vw;
+}
+.projects{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.projectup{
+    background-color: rgb(12, 12, 12);
+    padding: 1vw;
+    padding-bottom: 0;
+}
+.projectup video{
+    height: 100%;
+    width: 100%;
+    border-radius: 1.5vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.projectbottom{
+    padding: 1vw;
+    font-size: 1.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.projectbottom span p{
+    font-size: 1.2vw;
+    margin-top: .5vw;
+    opacity: 80%;
+}
+.projectbottom span:nth-child(1){
+    width: 80%;
+}
+.projectbottom svg{
+    height: 2.5vw;
+}
+.projectbottom span:nth-child(2){
+    padding: 1vw;
+    border-radius: 3vw;
+    background-color: transparent;
+    color: white;
+}
+.page3{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+}
+.page3top{
+    padding: 2vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 5vw;
+    text-align: center;
+}
+.page3top span{
+    color: #aeff00;
+}
+.footer{
+    padding: 3vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 80%;
+    color: white;
+}
+
+
